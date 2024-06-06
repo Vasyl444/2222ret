@@ -4,9 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./mmy-css/my-style.css">
+    <link rel="stylesheet" href="mmy-css/my-style.css">
+    <script src="my-js/first-js.js" defer></script>
 </head>
 <body>
-    <div class="mydiv"></div>
+    <header class="header">
+        <div class="header-div">Header</div>
+    </header>
+    <main>
+        <div class="main-div">
+            <div class="main">
+                <div class="intro"></div>
+                <p>first</p>
+                <div class="over"><span class="main-span">:-)</span>
+                </div>
+            </div>
+            <div class="main">
+                <div class="intro"></div>
+                <p>second</p>
+                <div class="over"><span class="main-span">:-)</span>
+                </div>
+            </div>
+            <div class="main">
+                <div class="intro"></div>
+                <p>end</p>
+                <div class="over"><span class="main-span">:-)</span>
+                </div>
+            </div>
+        </div>
+        <section class="forms">
+            <h2 class="forms-title">Differents form</h2>
+            <form class="forms-container">
+                <div class="first">
+                <label for="age" class="select-paragraf">select your age</label>
+                <select id="age" class="form-select" name="age" autofocus>
+                    <option value="10-20">10-20</option>
+                    <option value="20-30" selected>20-30</option>
+                    <option value="30-40">30-40</option>
+                </select>
+                </div>
+                <div class="first">
+                    <label namee>input your name</label>
+                    <input type="text" name="username" id="namee" placeholder="Jonn">
+                    <label for="surename">input your second name</label>
+                    <input type="text" name="user-surname" id="surename" placeholder="Mnemonic">
+                </div>
+                <div class="first">
+                    <label for="textt">feedback</label>
+                    <textarea class="text" id="textt" rows="7" placeholder="I wish you..."></textarea>
+                </div> 
+                <div class="first">
+                    <label for="pass">input password (min 8)</label>
+                    <input type="password" class="pas-form" id="pass"
+                    required minlength="8" placeholder="123">
+                </div>
+                <button type="submit" class="form-button" onclick="alert('Good job :-)')">Send</button>           
+            </form>
+            <form class="check">
+                <input id="music" class="chec" type="checkbox" value="music">
+                <label class="check-label" for="music"><span class="check-span">$</span>music</label>
+                <input class="chec" type="checkbox" id="sport" value="sport">
+                <label class="check-label" for="sport"><span class="check-span">$</span>sport</label>
+                <input class="chec" type="checkbox" id="game" value="game">
+                <label class="check-label" for="game"><span class="check-span">$</span>play games</label>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,5 +1,238 @@
-.mydiv {
-    width: 500px;
-    height: 650px;
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+nav {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+}
+a {
+    text-decoration: none;
+}
+main {
+    width: 100%;
+    height: 100vh;
     background-color: burlywood;
+    box-sizing: border-box;
+    padding: 25px;
+}
+.header {
+    width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+}
+    .header-div {
+    background-color: darkorange;
+    display: block;
+    width: calc(100% - 50px);
+    max-width: 800px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.main-div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    width: 100%;
+}
+.main {
+    min-width: 280px;
+    background-color: deeppink;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-color: none;
+    position: relative;
+}
+.intro {
+    height: 100px;
+    width: 100%;
+    background-color: magenta;
+}
+p {
+    padding: 15px 0;
+    margin: 0;
+}
+
+.over {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: chartreuse;
+    transition: transform 500ms linear;
+    overflow: hidden;
+}
+.main-span {
+    color: indianred;
+    font-size: 40px;
+    font-weight: 900;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+ .main:hover .over {
+    transform: translateY(-100%);
+}
+
+.forms-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.forms {
+    width: 100%;
+    background-color: chocolate;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.forms-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.first {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: bisque;
+    border-radius: 10px;
+    width: 21%;
+    padding: 15px;
+}
+.select-paragraf {
+    text-transform: capitalize;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    padding: 0;
+    margin: 0;
+}
+.form-select {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 5px;
+}
+select:focus {
+    outline: none;
+}
+*::placeholder {
+    font-style: italic;
+}
+input {
+    background-color: yellowgreen;
+    border-radius: 5px;
+    
+}
+input:placeholder-shown {
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+.text {
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    width: 100%;
+}
+.text:focus {
+    list-style-type: none;
+    outline: none;
+}
+.first:focus-within { background-color: goldenrod;}
+.form-button {
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    width: 10%;
+    height: 40px;
+    text-transform: uppercase;
+    background-color: blueviolet;
+    color: gainsboro;
+    font-weight: 700;
+    transition: transform 500ms linear,
+    background-color 500ms linear,
+    color 500ms linear;   
+}
+.form-button:focus,
+.form-button:hover {
+    transform: scale(1.1);
+    background-color: darkblue;
+}
+.check {
+    width: 35%;
+    margin: 20px auto 0;
+    background-color: crimson;
+    color: bisque;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.chec:checked + label {
+    color: coral;
+    transform: scale(1.1);
+}
+.chec {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.check-label {
+    position: relative;
+    padding-left: 20px;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+.check-span {
+    position: absolute;
+    top: 0;
+    left: -5px;
+    font-size: inherit;
+    color: transparent;
+    border: 1px solid darkslategray;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chec:checked + label > .check-span
+ {
+    transform: none;
+    color: aqua;
+    border-color: black;
+}
+.video {
+    width: 900px;
+    height: 600px;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 1200px) {
+    .header-div {background-color: aqua;}
 }
